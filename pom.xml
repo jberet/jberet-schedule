@@ -27,6 +27,7 @@
 
     <properties>
         <version.org.jberet>1.4.7.Final</version.org.jberet>
+        <version.sun.jaxb>2.3.3-b02</version.sun.jaxb>
     </properties>
 
     <modules>
@@ -36,10 +37,21 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.jboss.spec.javax.annotation</groupId>
+            <artifactId>jboss-annotations-api_1.3_spec</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-impl</artifactId>
+            <version>${version.sun.jaxb}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
         </dependency>
     </dependencies>
+
 
     <build>
         <plugins>
