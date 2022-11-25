@@ -1,7 +1,7 @@
 package org.jberet.schedule._private;
 
-import javax.ejb.ScheduleExpression;
-import javax.xml.bind.annotation.adapters.XmlAdapter;
+import jakarta.ejb.ScheduleExpression;
+import jakarta.xml.bind.annotation.adapters.XmlAdapter;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;

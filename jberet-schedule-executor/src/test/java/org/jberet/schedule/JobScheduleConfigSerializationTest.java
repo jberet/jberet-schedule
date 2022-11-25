@@ -2,12 +2,12 @@ package org.jberet.schedule;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.module.jaxb.JaxbAnnotationModule;
+import com.fasterxml.jackson.module.jakarta.xmlbind.JakartaXmlBindAnnotationModule;
 import org.junit.Assert;
 import org.junit.Test;
 
-import javax.ejb.ScheduleExpression;
-import javax.xml.bind.JAXB;
+import jakarta.ejb.ScheduleExpression;
+import jakarta.xml.bind.JAXB;
 import java.io.IOException;
 import java.io.StringReader;
 import java.io.StringWriter;
@@ -21,7 +21,7 @@ public class JobScheduleConfigSerializationTest {
     public void testJacksonJaxbSerialization() throws IOException {
         JobScheduleConfig jobScheduleConfig = createScheduleConfig();
         ObjectMapper objectMapper = new ObjectMapper();
-        objectMapper.registerModule(new JaxbAnnotationModule());
+        objectMapper.registerModule(new JakartaXmlBindAnnotationModule());
 
         StringWriter stringWriter = new StringWriter();
         objectMapper.writeValue(stringWriter, jobScheduleConfig);
@@ -107,6 +107,7 @@ public class JobScheduleConfigSerializationTest {
         scheduleExpression.dayOfWeek("3");
         scheduleExpression.start(startDate);
         scheduleExpression.hour("*/5");
+        scheduleExpression.timezone("");
         return JobScheduleConfigBuilder.newInstance()
                 .jobName("jobname")
                 .jobParameters(properties)

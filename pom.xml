@@ -18,16 +18,15 @@
     <parent>
         <artifactId>jberet-parent</artifactId>
         <groupId>org.jberet</groupId>
-        <version>1.4.7.Final</version>
+        <version>2.1.1.Final</version>
     </parent>
 
     <artifactId>jberet-schedule</artifactId>
-    <version>1.4.2.Final-SNAPSHOT</version>
+    <version>2.0.0.Final-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <properties>
-        <version.org.jberet>1.4.7.Final</version.org.jberet>
-        <version.sun.jaxb>2.3.3-b02</version.sun.jaxb>
+        <version.org.jberet>2.1.1.Final</version.org.jberet>
     </properties>
 
     <modules>
@@ -37,14 +36,16 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.jboss.spec.javax.annotation</groupId>
-            <artifactId>jboss-annotations-api_1.3_spec</artifactId>
+            <groupId>jakarta.annotation</groupId>
+            <artifactId>jakarta.annotation-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.sun.xml.bind</groupId>
-            <artifactId>jaxb-impl</artifactId>
-            <version>${version.sun.jaxb}</version>
-            <scope>provided</scope>
+            <groupId>jakarta.xml.bind</groupId>
+            <artifactId>jakarta.xml.bind-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.ejb</groupId>
+            <artifactId>jakarta.ejb-api</artifactId>
         </dependency>
         <dependency>
             <groupId>junit</groupId>

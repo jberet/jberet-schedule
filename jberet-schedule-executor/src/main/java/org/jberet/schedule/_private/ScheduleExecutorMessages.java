@@ -10,7 +10,7 @@
 
 package org.jberet.schedule._private;
 
-import javax.batch.operations.BatchRuntimeException;
+import jakarta.batch.operations.BatchRuntimeException;
 
 import org.jberet.schedule.JobScheduleConfig;
 import org.jboss.logging.Messages;
