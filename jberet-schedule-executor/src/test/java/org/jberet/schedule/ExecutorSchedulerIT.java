@@ -12,13 +12,12 @@ package org.jberet.schedule;
 
 import java.util.List;
 import java.util.Properties;
-import javax.batch.operations.JobOperator;
-import javax.batch.operations.NoSuchJobException;
-import javax.batch.runtime.BatchRuntime;
-import javax.batch.runtime.BatchStatus;
-import javax.batch.runtime.JobExecution;
+import jakarta.batch.operations.JobOperator;
+import jakarta.batch.operations.NoSuchJobException;
+import jakarta.batch.runtime.BatchRuntime;
+import jakarta.batch.runtime.BatchStatus;
+import jakarta.batch.runtime.JobExecution;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -30,7 +29,6 @@ import static org.junit.Assert.assertEquals;
  * A similar set of tests for Java EE, JBoss EAP and WildFly environment are in
  * wildfly-jberet-samples/scheduleExecutor/src/test/java/org/jberet/samples/wildfly/schedule/executor/ScheduleExecutorIT.java
  */
-@Ignore("These tests each take several minutes to complete, so ignore them from default build")
 public class ExecutorSchedulerIT {
     private static final String jobName = "executor-scheduler-job1";
     private static final String testNameKey = "testName";
@@ -55,13 +53,22 @@ public class ExecutorSchedulerIT {
 
     /**
      * Number of milliseconds to sleep, to wait for the job schedule to run.
-     * Currently set to 3 seconds longer than {@link #initialDelayMinute}.
+     * Currently set to 6 seconds longer than {@link #initialDelayMinute}.
      */
-    private static final long sleepTimeMillis = initialDelayMinute * 60 * 1000 + 3000;
+    private static final long sleepTimeMillis = initialDelayMinute * 60 * 1000 + 6000;
 
     private final JobScheduler jobScheduler = JobScheduler.getJobScheduler();
     private final JobOperator jobOperator = BatchRuntime.getJobOperator();
 
+    /**
+     * Property required to enable cdi scanning, since we don't define a beans.xml.
+     * We are using JUnit 4 so we can't use BeforeAll annotation to set the property.
+     * After upgrading the annotation should be preferred over constructor.
+     */
+    public ExecutorSchedulerIT() {
+        System.setProperty("jakarta.enterprise.inject.scan.implicit", "true");
+    }
+    
     /**
      * Tests single-action job schedule specified with an initial delay.
      * Verifies job schedule status and realized job execution status after

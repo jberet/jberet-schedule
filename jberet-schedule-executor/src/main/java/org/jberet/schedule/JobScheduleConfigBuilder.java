@@ -11,7 +11,7 @@
 package org.jberet.schedule;
 
 import java.util.Properties;
-import javax.ejb.ScheduleExpression;
+import jakarta.ejb.ScheduleExpression;
 
 /**
  * Builder class for {@link JobScheduleConfig}.

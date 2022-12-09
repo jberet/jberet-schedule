@@ -14,8 +14,8 @@ import java.util.List;
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
-import javax.batch.operations.JobOperator;
-import javax.batch.runtime.BatchRuntime;
+import jakarta.batch.operations.JobOperator;
+import jakarta.batch.runtime.BatchRuntime;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 

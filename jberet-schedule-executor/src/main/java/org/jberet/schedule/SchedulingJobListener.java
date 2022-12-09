@@ -13,17 +13,17 @@ package org.jberet.schedule;
 import java.util.Date;
 import java.util.List;
 import java.util.Properties;
-import javax.batch.api.BatchProperty;
-import javax.batch.api.listener.AbstractJobListener;
-import javax.batch.runtime.BatchStatus;
-import javax.batch.runtime.JobExecution;
-import javax.batch.runtime.context.JobContext;
-import javax.inject.Inject;
-import javax.inject.Named;
+import jakarta.batch.api.BatchProperty;
+import jakarta.batch.api.listener.AbstractJobListener;
+import jakarta.batch.runtime.BatchStatus;
+import jakarta.batch.runtime.JobExecution;
+import jakarta.batch.runtime.context.JobContext;
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
 
 import org.jberet.schedule._private.ScheduleExecutorLogger;
 
-import static javax.batch.runtime.BatchStatus.*;
+import static jakarta.batch.runtime.BatchStatus.*;
 
 /**
  * An implementation of {@code javax.batch.api.listener.JobListener} that
