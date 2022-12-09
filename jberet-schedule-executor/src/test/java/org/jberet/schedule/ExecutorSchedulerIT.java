@@ -53,9 +53,9 @@ public class ExecutorSchedulerIT {
 
     /**
      * Number of milliseconds to sleep, to wait for the job schedule to run.
-     * Currently set to 3 seconds longer than {@link #initialDelayMinute}.
+     * Currently set to 6 seconds longer than {@link #initialDelayMinute}.
      */
-    private static final long sleepTimeMillis = initialDelayMinute * 60 * 1000 + 3000;
+    private static final long sleepTimeMillis = initialDelayMinute * 60 * 1000 + 6000;
 
     private final JobScheduler jobScheduler = JobScheduler.getJobScheduler();
     private final JobOperator jobOperator = BatchRuntime.getJobOperator();
