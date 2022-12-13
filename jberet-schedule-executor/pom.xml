@@ -18,7 +18,7 @@
     <parent>
         <artifactId>jberet-schedule</artifactId>
         <groupId>org.jberet</groupId>
-        <version>2.0.0.Final</version>
+        <version>2.0.1.Final-SNAPSHOT</version>
     </parent>
 
     <artifactId>jberet-schedule-executor</artifactId>
