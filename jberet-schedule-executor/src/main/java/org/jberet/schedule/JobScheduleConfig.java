@@ -10,15 +10,15 @@
 
 package org.jberet.schedule;
 
-import org.jberet.schedule._private.ScheduleExpressionAdapter;
+import java.io.Serializable;
+import java.util.Properties;
 
 import jakarta.ejb.ScheduleExpression;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import java.io.Serializable;
-import java.util.Properties;
+import org.jberet.schedule._private.ScheduleExpressionAdapter;
 
 /**
  * Represents job schedule configuration, typically passed from the client side
@@ -54,7 +54,7 @@ public final class JobScheduleConfig implements Serializable {
     /**
      * The schedule expression for calendar-based job schedule.
      *
-     * @see "javax.ejb.ScheduleExpression"
+     * @see "jakarta.ejb.ScheduleExpression"
      */
     @XmlJavaTypeAdapter(ScheduleExpressionAdapter.class)
     final ScheduleExpression scheduleExpression;
@@ -163,7 +163,7 @@ public final class JobScheduleConfig implements Serializable {
     }
 
     /**
-     * Gets {@code javax.ejb.ScheduleExpression} for calendar-based job schedule.
+     * Gets {@code jakarta.ejb.ScheduleExpression} for calendar-based job schedule.
      *
      * @return schedule expression, may be null
      */

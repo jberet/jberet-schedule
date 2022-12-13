@@ -5,7 +5,7 @@
  
  * jberet-schedule-executor sub-module
     * scheduler based on `java.util.concurrent.ScheduledExecutorService`, suitable for Java SE applications.
-    * scheduler based on `javax.enterprise.concurrent.ManagedScheduledExecutorService`, suitable for Java EE applications.
+    * scheduler based on `jakarta.enterprise.concurrent.ManagedScheduledExecutorService`, suitable for Java EE applications.
  * jberet-schedule-timer sub-module
     * scheduler based on EJB Timer
   
