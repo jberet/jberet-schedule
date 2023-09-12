@@ -34,8 +34,8 @@ To clean and build:
     * See [tests](https://github.com/jberet/jsr352/blob/master/jberet-schedule/jberet-schedule-executor/src/test/java/org/jberet/schedule/ExecutorSchedulerIT.java) using jberet-schedule-executor in Java SE environment.
 * In Java EE or web applications deployed to JBoss EAP & WildFly:
     * include jberet-schedule-executor module and optionally jberet-schedule-timer module in application package.
-    * Sample app using jberet-schedule-executor: [wildfly-jberet-samples/scheduleExecutor](https://github.com/jberet/jsr352/blob/master/wildfly-jberet-samples/scheduleExecutor)
-    * Sample app using jberet-schedule-timer: [wildfly-jberet-samples/scheduleTimer](https://github.com/jberet/jsr352/blob/master/wildfly-jberet-samples/scheduleTimer)
+    * Sample app using jberet-schedule-executor: [wildfly-jberet-samples/scheduleExecutor](https://github.com/jberet/jberet-wildfly-samples/tree/master/scheduleExecutor)
+    * Sample app using jberet-schedule-timer: [wildfly-jberet-samples/scheduleTimer](https://github.com/jberet/jberet-wildfly-samples/tree/master/scheduleTimer)
 
 ## Resources
 * [JIRA Issue JBERET-222 Support Batch Job Scheduling](https://issues.jboss.org/browse/JBERET-222)
