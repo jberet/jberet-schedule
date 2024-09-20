@@ -17,10 +17,10 @@ import jakarta.batch.operations.NoSuchJobException;
 import jakarta.batch.runtime.BatchRuntime;
 import jakarta.batch.runtime.BatchStatus;
 import jakarta.batch.runtime.JobExecution;
+import org.junit.jupiter.api.Test;
 
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import static org.junit.Assert.assertEquals;
 
 /**
  * Tests for batch job scheduling in Java SE environment,
