@@ -17,7 +17,6 @@ import jakarta.batch.operations.NoSuchJobException;
 import jakarta.batch.runtime.BatchRuntime;
 import jakarta.batch.runtime.BatchStatus;
 import jakarta.batch.runtime.JobExecution;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -30,7 +29,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * A similar set of tests for Java EE, JBoss EAP and WildFly environment are in
  * wildfly-jberet-samples/scheduleExecutor/src/test/java/org/jberet/samples/wildfly/schedule/executor/ScheduleExecutorIT.java
  */
-@Disabled
 public class ExecutorSchedulerIT {
     private static final String jobName = "executor-scheduler-job1";
     private static final String testNameKey = "testName";
